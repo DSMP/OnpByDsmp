@@ -10,19 +10,19 @@ namespace ONPWithStack
         {
             _output = new List<char>();
             Console.Write("Podaje poprawne wyrażenie: ");
-            //string input = Console.ReadLine();
-            string input = "((2*5+1)/2)=";
+            string input = Console.ReadLine();
+            //string input = "((2*5+1)/2)=";
             if (input[input.Length-1] != '=')
             {
                 input += '=';
             }
             NormalToONP(input);
-            Console.Write("Output: ");
+            Console.Write("\nOutput: ");
             foreach (var item in _output)
             {
                 Console.Write(item + " ");
             }
-
+            Console.ReadKey();
         }
         static public void NormalToONP(string normalArg)
         {
